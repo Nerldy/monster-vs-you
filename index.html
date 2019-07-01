@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Give+You+Glory&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./main.css" />
+		<title>Monster vs You</title>
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<h1>Monster Attack!</h1>
+				<div id="names">
+					<div class="name-container">
+						<h2>You</h2>
+						<div class="health" :style="[yourHealthStyles]">
+							<span>{{ displayYourHealth }}</span>
+						</div>
+					</div>
+					<div class="name-container">
+						<h2>Monster</h2>
+						<div class="health" :style="[monsterStyles]">
+							<span>{{ displayMonsterHealth }}</span>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div v-show="!gameOn" @click="toggleGameOn" class="game-buttons">
+				<button @click="startNewGame" id="new-game-button">
+					Start New Game
+				</button>
+			</div>
+			<div v-show="gameOn" class="game-buttons">
+				<button @click="attackMonster" id="attack-button">
+					Attack
+				</button>
+				<button @click="specialAttack" id="special-attack-button">
+					Special Attack
+				</button>
+				<button @click="heal" id="heal-button">Heal</button>
+				<button @click="toggleGameOn" id="give-up-button">
+					Give Up
+				</button>
+			</div>
+			<div v-show="displayDamage.length" class="damage damage-info">
+				<p v-for="(damage, index) in displayDamage" :key="index">
+					{{ damage.message }}
+				</p>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>
