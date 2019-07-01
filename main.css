@@ -1,0 +1,142 @@
+body {
+    background-color: #090B06;
+}
+
+#app {
+    margin: 0 auto;
+    width: 80%;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #F5D913;
+}
+
+h1 {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    color: #F46D0E;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+#names {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.name-container {
+    flex: 1 0 0;
+    padding-right: 10px;
+}
+
+.game-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-buttons button {
+    cursor: pointer;
+    padding: 20px;
+    font-family: 'Calligraffitti', cursive;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 20px;
+    color: #090B06;
+}
+
+#new-game-button {
+    background-color: #F5D913;
+}
+
+#new-game-button:hover {
+    color: #F5D913;
+    background-color: #090B06;
+    border: 0.2em solid #F5D913;
+}
+
+#attack-button {
+    border: 0.2em solid #F46D0E;
+    color: #F46D0E;
+}
+
+#attack-button:hover {
+    background-color: #F46D0E;
+    color: #090B06;
+}
+
+#attack-button:active {
+    background-color: #F5D913;
+    color: #090B06;
+    border-color: transparent;
+}
+
+#special-attack-button {
+    border: 0.2em solid #EB912D;
+    color: #EB912D;
+}
+
+#special-attack-button:hover {
+    background-color: #EB912D;
+    color: #090B06;
+}
+
+#special-attack-button:active {
+    background-color: #F5D913;
+    color: #090B06;
+    border-color: transparent;
+}
+
+#heal-button {
+    border: 0.2em solid #509e3e;
+    color: #509e3e;
+}
+
+#heal-button:hover {
+    background-color: #509e3e;
+    color: #090B06;
+}
+
+#heal-button:active {
+    background-color: #F5D913;
+    color: #090B06;
+    border-color: transparent;
+}
+
+#give-up-button {
+    border: 0.2em solid #5e675c;
+    color: #5e675c;
+}
+
+#give-up-button:hover {
+    background-color: #5e675c;
+    color: #090B06;
+}
+
+.damage {
+    font-family: 'Give You Glory', cursive;
+}
+
+.health {
+    margin-right: 100px;
+}
+
+.health span {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.damage-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.damage-info p {
+    padding: 10px;
+    flex: 1 0 40%;
+    margin-right: 10px;
+    background-color: #F46D0E;
+}
